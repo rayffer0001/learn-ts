@@ -48,10 +48,35 @@ console.log(students.filter((students) => students !== null));
 
 //Tuplas
 let exampleTuple = [null, 'hola', '', null];
-let otroExampletuple: [string, null] = ['hola', null, 'hola', null];//tupla, el orden importa
+let otroExampletuple: [string, null] = ['hola', null];//tupla, el orden importa
 
-//creando nuestro propios typos
+//creando nuestro propios typos personalizados
 type stringOrNull = string | null;
 
+//union types
 type statusCode = 'active' | 'inactive';
-let studentStatus; statusCode = 'inactive';
+let studentStatus: statusCode = 'inactive';
+
+//Any
+let working: any = 25;
+working = 'hola';
+
+//Funciones : hay que decirle a que retorna algo
+function validateValue(): void { //void significa que no retorna nada
+}
+
+//Funciones : 
+function validateValuee(value: unknown): boolean { 
+    
+    if (typeof value === 'string') {
+        console.log
+    }
+    
+    if (value === ''){
+        return false;
+    }else{
+        return true;
+    }
+}
+
+let admins
