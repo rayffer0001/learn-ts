@@ -1,20 +1,14 @@
 import { IPersona } from "./ipersona_poo";
 
-enum persona{
-    nombre = "",
-    apellido = "",
-    edad = 21,
-}
 
 export class hombre implements IPersona{
     nombre: string;
     apellido: string;
-    edad: number;
+    edad!: number;
     
     constructor(nombre?: string, apellido?: string){
-        this.nombre = persona.nombre ?? "";
-        this.apellido = persona.apellido ?? "";
-        this.edad = persona.edad;
+        this.nombre = nombre ?? "";
+        this.apellido = apellido ?? "";
     }
     
     nombre_completo(): string {
