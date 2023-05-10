@@ -1,8 +1,8 @@
 import { IPersona } from "./ipersona_poo";
 
 enum persona{
-    nombre = "rayffer",
-    apellido = "rua",
+    nombre = "",
+    apellido = "",
     edad = 21,
 }
 
@@ -12,8 +12,8 @@ export class hombre implements IPersona{
     edad: number;
     
     constructor(nombre?: string, apellido?: string){
-        this.nombre = persona.nombre;
-        this.apellido = persona.apellido;
+        this.nombre = persona.nombre ?? "";
+        this.apellido = persona.apellido ?? "";
         this.edad = persona.edad;
     }
     
