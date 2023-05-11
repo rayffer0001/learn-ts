@@ -1,27 +1,26 @@
 export abstract class construccion{
     public static cantidad_edificios: number = 0;
-    private pisos!: number;
+    private _pisos!: number;
 
     constructor(pisos:number){
+        this._pisos = pisos;
         construccion.cantidad_edificios++;
-        //falta llamar pisos
     }
-
 
     public impuestos():number{
-        return this.pisos * 3000000; 
+        return this._pisos * 3000000; 
     }
-    
-    // public get_pisos():number{
+    //Get y set crean propiedades que son publicas y crear accesibilidad desde afuera
+    public get pisos():number{
+        return this._pisos;    
+    }
 
-    // }
+    public set pisos(pisos:number){
+        this._pisos = pisos;
+    }
 
-    // public set_pisos():number{
-
-    // }
-
-    // public static edificios_contador():number{
-
-    // }
+    public static edificios_contador():number{
+        return construccion.cantidad_edificios;
+    }
 
 }
